@@ -14,7 +14,6 @@ This is a solution to the [3-column preview card component challenge on Frontend
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -29,15 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./documentation/completed-project.png)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot of Completed Project](./documentation/completed-project.png)
 
 ### Links
 
@@ -46,68 +37,57 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+- Start with mobile version of website, then add media-queries using min-width to expand the website for desktop
+- Create the structures of the HTML first, then move on to the CSS
+- Create a seperate reset.css file for common css reset parameters.
+- In the beginning of style.css, create variables for colors, and width and height which are reused in other areas of code
+- Step through the HTML from top to bottom and style the CSS based on the order that the elements appear in the HTML.
+- Use the BEM naming convention for classnames.
+
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+When using Flexbox, it is important to understand the actual width of the parent flex container. The flex items by default will try to fit inside the available space in the flexbox.
 
-To see how you can add code snippets, see below:
+When using flexbox, it is a good idea to either specify width of the elements, or use `flex`, but not both.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+When creating the border radius on the parent element (main) I had to use `overflow: hidden` to show the border radius. By default, since the child element (section) were the same size as the parent element, the child elements were overflowing and obscuring the border radius defined on the parent element.
+
+If you are repeatedly using the same values (like background colors), you can use css custom variables so that you can reuse those values and only update the value once.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  --card--color-suv: hsl(184, 100%, 22%);
+}
+
+.card--color-suv {
+  background-color: var(--card--color-suv);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I plan to continue improving my knowledge of flexbox as well as HTML and CSS structuring and styling. I learned to use BEM and semantic HTML but need more practice.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+For this particular project, there is probably a way to refactor the code to make it cleaner.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - I always reference this guid when I need to look back at any flexbox properties, it is super helpful.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Piotr Szponder](https://github.com/pszponder)
+- LinkedIn - [Piotr Szponder](https://www.linkedin.com/in/piotrszponder/)
+- Frontend Mentor - [@pszponder](https://www.frontendmentor.io/profile/pszponder)
+- Twitter - [@PSzponder](https://twitter.com/PSzponder)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+```
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+```
