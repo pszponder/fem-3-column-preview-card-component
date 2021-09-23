@@ -2,6 +2,8 @@
 
 ## TODO:
 
+## DONE:
+
 - Start with Mobile first, then add media-queries to make it responsive
 
 - remember to set the active states on the buttons
@@ -24,10 +26,6 @@
   - font-family
   - colors
   - Mabe put this in their own base.css?
-
--
-
-## DONE:
 
 - Create a card template which will be replicated across all 3 sections
 
